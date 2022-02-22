@@ -1,28 +1,28 @@
 import {Content} from './content';
 import {html, uid} from '../types';
 
-export class Assessment extends Content {
+export interface Assessment extends Content {
     summary?: string;
     questions?: uid[];
     time?: number;
 }
 
-export class AssessmentRuntime extends Assessment {
+export interface AssessmentRuntime extends Assessment {
     score?: number;
     scoreTotal?: number;
     chapterId?: uid;
     easierScoring?: boolean;
 }
 
-export class SimpleQuestion extends Content {
+export interface SimpleQuestion extends Content {
     question: uid;
 }
 
-export class SimpleQuestionRuntime extends SimpleQuestion {
+export interface SimpleQuestionRuntime extends SimpleQuestion {
     chapterId?: number;
 }
 
-export class Question {
+export interface Question {
     type: string;
     score: number;
     statement: string;
@@ -33,36 +33,36 @@ export class Question {
     easierScoring?: boolean;
 }
 
-export class DragAndDropquestion extends Question{
+export interface DragAndDropquestion extends Question{
     correctResponse: Array<{label: string, values: string[]}>;
 }
 
-export class MultipleChoiceQuestion extends Question {
+export interface MultipleChoiceQuestion extends Question {
     correctResponse: Array<string>;
 }
 
-export class SimpleChoiceQuestion extends Question {
+export interface SimpleChoiceQuestion extends Question {
     correctResponse: string;
 }
 
-export class Response {
+export interface Response {
     label: string;
     value: string;
     explanation?: string;
 }
 
-export class SwipeQuestion extends Question {
+export interface SwipeQuestion extends Question {
     correctResponse: Array<{label: string, values: string[]}>;
 }
 
-export class SwipeQuestionRuntime extends SwipeQuestion {
+export interface SwipeQuestionRuntime extends SwipeQuestion {
     possibilities?: Array<string>;
 }
 
-export class DropDownListQuestion extends Question {
+export interface DropDownListQuestion extends Question {
     correctResponse: Array<{label: string, values: string[]}>;
 }
 
-export class DropDownListQuestionRuntime extends DragAndDropquestion {
+export interface DropDownListQuestionRuntime extends DragAndDropquestion {
     categories?: Array<string>;
 }

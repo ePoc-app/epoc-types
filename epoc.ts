@@ -3,7 +3,7 @@ import {Content} from './contents/content';
 import {html, uid} from './types';
 import {Assessment, Question} from './contents/assessment';
 
-export class EpocMetadata {
+export interface EpocMetadata {
     lastModif : string;
     version : string;
     id: string;
@@ -19,13 +19,13 @@ export class EpocMetadata {
     download: string;
 }
 
-export class EpocLibrary extends EpocMetadata {
+export interface EpocLibrary extends EpocMetadata {
     downloading: boolean;
     downloaded: boolean;
     unzipping: boolean;
 }
 
-export class Epoc extends EpocMetadata {
+export interface Epoc extends EpocMetadata {
     certificateScore: number;
     parameters: Parameters;
     contents: Record<uid, Content>;
@@ -33,11 +33,11 @@ export class Epoc extends EpocMetadata {
     questions: Record<uid, Question>;
 }
 
-export class EpocRuntime extends Epoc {
+export interface EpocRuntime extends Epoc {
     assessments: Assessment[];
 }
 
-export class Chapter {
+export interface Chapter {
     id: uid;
     title: string;
     image?: string;
@@ -45,7 +45,7 @@ export class Chapter {
     contents: uid[];
 }
 
-export class ChapterRuntime extends Chapter {
+export interface ChapterRuntime extends Chapter {
     time: number;
     videoCount: number;
     assessmentCount: number;
@@ -55,7 +55,7 @@ export class ChapterRuntime extends Chapter {
     assessmentDone: boolean;
 }
 
-export class Parameters {
+export interface Parameters {
     chapterParameter?: string;
     easierScoring?: boolean;
     openQuestionButton?: string;

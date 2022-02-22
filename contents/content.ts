@@ -1,6 +1,6 @@
 import {uid} from '../types';
 
-export abstract class Content {
+export interface Content {
     id: uid;
     type: 'html' | 'assessment' | 'video' | 'simple-question' | 'choice';
     title: string;
@@ -9,25 +9,25 @@ export abstract class Content {
     conditionResolver?: ScoreResolver | ChoiceResolver;
 }
 
-abstract class Resolver {
+ interface Resolver {
     conditionalFlag: ConditionalFlag[];
 }
 
-export class ScoreResolver extends Resolver{
+export interface ScoreResolver extends Resolver{
     type: 'score';
 }
 
-export class ChoiceResolver extends Resolver{
+export interface ChoiceResolver extends Resolver{
     type: 'choice';
     choices: Choice[];
 }
 
-export class Choice {
+export interface Choice {
     label: string;
     value: string;
 }
 
-export class ConditionalFlag {
+export interface ConditionalFlag {
     value: string;
     flags: uid[];
 }

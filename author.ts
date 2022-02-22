@@ -1,6 +1,6 @@
 import {html} from './types';
 
-export class Author {
+export interface Author {
     name: string;
     image: string;
     description: html;

@@ -1,6 +1,6 @@
 import {Content} from './content';
 import {html} from '../types';
 
-export class Html extends Content {
+export interface Html extends Content {
     html: html;
 }
