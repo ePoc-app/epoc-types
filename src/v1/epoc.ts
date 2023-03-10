@@ -1,7 +1,7 @@
 import {Author} from './author';
-import {Content} from './contents/content';
+import {Content} from './content';
 import {html, uid} from './types';
-import {Assessment, Question} from './contents/assessment';
+import {Question} from './question';
 
 export interface EpocMetadata {
     lastModif : string;
@@ -33,26 +33,12 @@ export interface Epoc extends EpocMetadata {
     questions: Record<uid, Question>;
 }
 
-export interface EpocRuntime extends Epoc {
-    assessments: Assessment[];
-}
-
 export interface Chapter {
     id: uid;
     title: string;
     image?: string;
     objectives?: string[];
     contents: uid[];
-}
-
-export interface ChapterRuntime extends Chapter {
-    time: number;
-    videoCount: number;
-    assessmentCount: number;
-    initializedContents: Content[];
-    assessments: uid[];
-    chapterOpened: boolean;
-    assessmentDone: boolean;
 }
 
 export interface Parameters {

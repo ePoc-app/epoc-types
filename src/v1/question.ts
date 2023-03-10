@@ -1,26 +1,4 @@
-import {Content} from './content';
-import {html, uid} from '../types';
-
-export interface Assessment extends Content {
-    summary?: string;
-    questions?: uid[];
-    time?: number;
-}
-
-export interface AssessmentRuntime extends Assessment {
-    score?: number;
-    scoreTotal?: number;
-    chapterId?: uid;
-    easierScoring?: boolean;
-}
-
-export interface SimpleQuestion extends Content {
-    question: uid;
-}
-
-export interface SimpleQuestionRuntime extends SimpleQuestion {
-    chapterId?: number;
-}
+import {html} from './types';
 
 export interface Question {
     type: string;
@@ -55,14 +33,6 @@ export interface SwipeQuestion extends Question {
     correctResponse: Array<{label: string, values: string[]}>;
 }
 
-export interface SwipeQuestionRuntime extends SwipeQuestion {
-    possibilities?: Array<string>;
-}
-
 export interface DropDownListQuestion extends Question {
     correctResponse: Array<{label: string, values: string[]}>;
-}
-
-export interface DropDownListQuestionRuntime extends DragAndDropquestion {
-    categories?: Array<string>;
 }

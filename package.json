@@ -1,9 +1,9 @@
 {
   "name": "epoc-specs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "ePoc (Electronic Pocket Open Course) types specifications",
-  "main": "dist/epoc.ts",
-  "types": "dist/epoc.d.ts",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepublish": "tsc"
   },
@@ -17,7 +17,6 @@
   "author": "Inria Learning Lab",
   "license": "CeCILL-B",
   "devDependencies": {
-    "typedoc": "^0.23.25",
     "typescript": "^4.9.5"
   }
 }

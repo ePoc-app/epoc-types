@@ -1,4 +1,4 @@
-import {uid} from '../types';
+import {html, uid} from './types';
 
 export interface Content {
     id: uid;
@@ -7,6 +7,28 @@ export interface Content {
     subtitle?: string;
     conditional?: boolean;
     conditionResolver?: ScoreResolver | ChoiceResolver;
+}
+
+export interface Video extends Content {
+    source: string;
+    summary: html;
+    subtitles: {label: string, lang: string, src: string}[];
+    transcript: string;
+    poster: string;
+}
+
+export interface Html extends Content {
+    html: html;
+}
+
+export interface Assessment extends Content {
+    summary?: string;
+    questions?: uid[];
+    time?: number;
+}
+
+export interface SimpleQuestion extends Content {
+    question: uid;
 }
 
  interface Resolver {
