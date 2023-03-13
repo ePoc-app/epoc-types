@@ -1,11 +1,11 @@
 {
   "name": "@epoc/epoc-specs",
-  "version": "2.0.0-beta-2",
+  "version": "2.0.0-beta-3",
   "description": "ePoc (Electronic Pocket Open Course) types specifications",
   "main": "dist/index.ts",
   "types": "dist/index.d.ts",
   "scripts": {
-    "publish": "tsc && npm publish --access=public"
+    "p": "tsc && npm publish --access=public"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 import {html, uid} from './types';
 
 export interface Content {
-    type: 'html' | 'assessment' | 'video' | 'simple-question' | 'choice';
+    type: string;
     title: string;
     subtitle?: string;
     conditional?: boolean;
@@ -9,6 +9,7 @@ export interface Content {
 }
 
 export interface Video extends Content {
+    type: 'video'
     source: string;
     summary: html;
     subtitles: {label: string, lang: string, src: string}[];
@@ -17,16 +18,19 @@ export interface Video extends Content {
 }
 
 export interface Html extends Content {
+    type: 'html'
     html: html;
 }
 
 export interface Assessment extends Content {
+    type: 'assessment'
     summary?: string;
     questions?: uid[];
     time?: number;
 }
 
 export interface SimpleQuestion extends Content {
+    type: 'simple-question'
     question: uid;
 }
 
