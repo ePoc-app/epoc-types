@@ -1,5 +1,5 @@
 {
-  "name": "epoc-specs",
+  "name": "@epoc/epoc-specs",
   "version": "2.0.0",
   "description": "ePoc (Electronic Pocket Open Course) types specifications",
   "main": "dist/index.ts",

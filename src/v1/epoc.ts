@@ -10,7 +10,7 @@ export interface EpocMetadata {
     title: string;
     image: string;
     teaser?: string;
-    authors: Record<uid, Author>;
+    authors: Author[];
     thumbnail : string;
     summary: html;
     objectives: string[];
@@ -34,7 +34,6 @@ export interface Epoc extends EpocMetadata {
 }
 
 export interface Chapter {
-    id: uid;
     title: string;
     image?: string;
     objectives?: string[];

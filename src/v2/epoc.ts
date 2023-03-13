@@ -148,7 +148,7 @@ export interface Author {
     /**
      * Specifies the author's job title
      */
-    titre: string;
+    title: string;
 
     /**
      * Specifies the author's profil picture
