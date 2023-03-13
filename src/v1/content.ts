@@ -1,7 +1,6 @@
 import {html, uid} from './types';
 
 export interface Content {
-    id: uid;
     type: 'html' | 'assessment' | 'video' | 'simple-question' | 'choice';
     title: string;
     subtitle?: string;
