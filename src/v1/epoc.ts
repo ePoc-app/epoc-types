@@ -35,7 +35,6 @@ export interface Epoc extends EpocMetadata {
 
 export interface Chapter {
     title: string;
-    image?: string;
     objectives?: string[];
     contents: uid[];
 }
