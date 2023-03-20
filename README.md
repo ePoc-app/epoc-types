@@ -1,3 +1,3 @@
-# epoc-specs
+# epoc-types
 
-npm install @epoc/epoc-specs
+npm install @epoc/epoc-types
