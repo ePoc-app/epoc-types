@@ -28,6 +28,7 @@ export interface EpocLibrary extends EpocMetadata {
 export interface Epoc extends EpocMetadata {
     certificateScore: number;
     parameters: Parameters;
+    plugins: string[];
     contents: Record<uid, Content>;
     chapters: Record<uid, Chapter>;
     questions: Record<uid, Question>;
