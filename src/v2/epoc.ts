@@ -202,6 +202,11 @@ export interface Screen {
     subtitle?: string;
 
     /**
+     * Specifies if the screen appears in the detailed table of contents
+     */
+    hidden?: boolean;
+
+    /**
      * List the screen content ids
      */
     contents: uid[];

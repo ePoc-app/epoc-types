@@ -4,6 +4,7 @@ export interface Content {
     type: string;
     title: string;
     subtitle?: string;
+    hidden?: boolean;
     conditional?: boolean;
     conditionResolver?: ScoreResolver | ChoiceResolver;
 }
