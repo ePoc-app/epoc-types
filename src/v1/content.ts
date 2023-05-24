@@ -6,7 +6,6 @@ export interface Content {
     subtitle?: string;
     hidden?: boolean;
     conditional?: boolean;
-    conditionResolver?: ScoreResolver | ChoiceResolver;
 }
 
 export interface Video extends Content {
@@ -35,17 +34,16 @@ export interface SimpleQuestion extends Content {
     question: uid;
 }
 
- interface Resolver {
-    conditionalFlag: ConditionalFlag[];
+export interface ChoiceCondition extends Content {
+    type: 'choice'
+    conditionResolver: ChoiceResolver;
 }
 
-export interface ScoreResolver extends Resolver{
-    type: 'score';
-}
-
-export interface ChoiceResolver extends Resolver{
+export interface ChoiceResolver {
     type: 'choice';
+    label: string;
     choices: Choice[];
+    conditionalFlag: ConditionalFlag[];
 }
 
 export interface Choice {
