@@ -58,6 +58,31 @@ export interface Video extends BaseContent {
 }
 
 /**
+* Define the audio content properties
+*/
+export interface Audio extends BaseContent {
+    /**
+     * Specifies the type of content
+     */
+    type: 'audio';
+
+    /**
+     * Specifies the audio source uri
+     */
+    src: uri;
+
+    /**
+     * Specifies the text transcript of the audio
+     */
+    transcript: string;
+
+    /**
+     * Specifies the video poster (thumbnail) uri
+     */
+    poster: uri;
+}
+
+/**
 * Define the assessment content properties
 */
 export interface Assessment extends BaseContent {

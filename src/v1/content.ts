@@ -17,6 +17,14 @@ export interface Video extends Content {
     poster: string;
 }
 
+export interface Audio extends Content {
+    type: 'audio'
+    source: string;
+    summary: html;
+    transcript: string;
+    poster: string;
+}
+
 export interface Html extends Content {
     type: 'html'
     html: html;
