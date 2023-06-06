@@ -3,7 +3,7 @@ import {uid, html, uri, langcode} from './types';
 /**
 * Define the union type of all kind of screen content
 */
-export type Content = Html | Video | Assessment | SimpleQuestion;
+export type Content = Html | Video | Audio | Assessment | SimpleQuestion;
 
 /**
 * Define the base content properties
