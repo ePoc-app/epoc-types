@@ -1,6 +1,6 @@
 {
   "name": "@epoc/epoc-types",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0-beta.6",
   "description": "ePoc (Electronic Pocket Open Course) types specifications",
   "main": "dist/index.ts",
   "types": "dist/index.d.ts",
