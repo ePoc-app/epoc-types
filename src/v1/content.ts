@@ -31,7 +31,7 @@ export interface Html extends Content {
 
 export interface Assessment extends Content {
     type: 'assessment'
-    summary?: string;
+    summary?: html;
     questions?: uid[];
     time?: number;
 }
