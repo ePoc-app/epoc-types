@@ -22,7 +22,6 @@ export interface Audio extends Content {
     source: string;
     summary: html;
     transcript: string;
-    poster: string;
 }
 
 export interface Html extends Content {

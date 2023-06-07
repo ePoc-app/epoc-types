@@ -75,11 +75,6 @@ export interface Audio extends BaseContent {
      * Specifies the text transcript of the audio
      */
     transcript: string;
-
-    /**
-     * Specifies the video poster (thumbnail) uri
-     */
-    poster: uri;
 }
 
 /**
