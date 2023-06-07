@@ -19,12 +19,6 @@ export interface EpocMetadata {
     download: string;
 }
 
-export interface EpocLibrary extends EpocMetadata {
-    downloading: boolean;
-    downloaded: boolean;
-    unzipping: boolean;
-}
-
 export interface Epoc extends EpocMetadata {
     certificateScore: number;
     parameters: Parameters;
