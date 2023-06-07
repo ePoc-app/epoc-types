@@ -17,6 +17,7 @@ export interface EpocMetadata {
     chaptersCount: number;
     assessmentsCount: number;
     download: string;
+    edition: string;
 }
 
 export interface Epoc extends EpocMetadata {
