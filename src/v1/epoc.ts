@@ -18,6 +18,11 @@ export interface EpocMetadata {
     assessmentsCount: number;
     download: string;
     edition: string;
+    license: {
+        name: string;
+        url: string;
+        content: string;
+    }
 }
 
 export interface Epoc extends EpocMetadata {

@@ -82,6 +82,26 @@ export interface EpocMetadata {
      */
     translations?: Map<langcode, uid>;
 
+    /**
+     * Specifies the ePoc license
+     */
+    license: {
+        /**
+         * Specifies the license name
+         */
+        name: string;
+
+        /**
+         * Specifies the url where you can find the license
+         */
+        url: string;
+
+        /**
+         * Specifies the text content of the license
+         */
+        content: string;
+    }
+
 }
 
 /**
