@@ -11,7 +11,7 @@ export interface Question {
 
     /**
      * The score of this question
-     * @deprecated Use pedagogical achievements instead
+     * @deprecated Use badges instead
      */
     score: number;
 

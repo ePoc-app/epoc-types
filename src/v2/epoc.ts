@@ -1,7 +1,7 @@
 import {Content} from './content';
 import {html, uid, uri, langcode} from './types';
 import {Question} from './question';
-import {Achievement} from './achievement';
+import {Badge} from './badge';
 
 /**
 * Contains all the ePoc metadata that can be retrieved from the library API 
@@ -136,14 +136,14 @@ export interface Epoc extends EpocMetadata {
 
     /**
      * The score to obtain the certificate
-     * @deprecated Use pedagogical achievements instead
+     * @deprecated Use badges instead
      */
     certificateScore?: number;
 
     /**
-     * Map of all contents (id, content) of the ePoc
+     * Map of all badges (id, badge) of the ePoc
      */
-    achievements: Map<uid, Achievement>
+    badges: Map<uid, Badge>
 
     /**
      * List of plugins of the ePoc

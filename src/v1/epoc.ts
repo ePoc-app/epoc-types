@@ -2,6 +2,7 @@ import {Author} from './author';
 import {Content} from './content';
 import {html, uid} from './types';
 import {Question} from './question';
+import {Badge} from './badge';
 
 export interface EpocMetadata {
     lastModif : string;
@@ -26,12 +27,14 @@ export interface EpocMetadata {
 }
 
 export interface Epoc extends EpocMetadata {
+    certificateBadgeCount: number;
     certificateScore: number;
     parameters: Parameters;
     plugins: string[];
     contents: Record<uid, Content>;
     chapters: Record<uid, Chapter>;
     questions: Record<uid, Question>;
+    badges: Record<uid, Badge>;
 }
 
 export interface Chapter {
