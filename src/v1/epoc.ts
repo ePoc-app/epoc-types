@@ -6,6 +6,7 @@ import {Badge} from './badge';
 
 export interface EpocMetadata {
     lastModif : string;
+    editorVersion: string;
     version : string;
     id: string;
     title: string;

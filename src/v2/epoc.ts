@@ -8,6 +8,11 @@ import {Badge} from './badge';
 */
 export interface EpocMetadata {
     /**
+     * Specifies the ePoc editor version for debug purpose
+     */
+    editorVersion: string;
+    
+    /**
      * Specifies the ePoc data format version for backward compatibility
      */
     version: number;
