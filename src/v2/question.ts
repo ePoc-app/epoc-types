@@ -130,3 +130,24 @@ export interface DropDownListQuestion extends Question {
      */
     correctResponse: Array<{label: string, values: string[]}>;
 }
+
+/**
+ * Define the plugin custom question properties
+ */
+export interface CustomQuestion extends Question {
+    /**
+     * Specifies the type of question
+     */
+    type: 'custom';
+
+    /**
+     * The correction for question with single value expected
+     */
+    correctResponse: string;
+
+
+    /**
+     * The custom html template filename
+     */
+    template: string;
+}

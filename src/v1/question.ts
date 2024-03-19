@@ -40,6 +40,11 @@ export interface ReorderQuestion extends Question {
     type: 'reorder';
 }
 
+export interface CustomQuestion extends Question {
+    type: 'custom';
+    template: string;
+}
+
 export interface Response {
     label: string;
     value: string;
