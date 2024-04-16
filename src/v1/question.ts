@@ -43,7 +43,7 @@ export interface ReorderQuestion extends Question {
 export interface CustomQuestion extends Question {
     type: 'custom';
     template: string;
-    data: Record<string, string>;
+    data?: Record<string, string>;
 }
 
 export interface Response {

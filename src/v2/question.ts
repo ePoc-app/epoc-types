@@ -154,5 +154,5 @@ export interface CustomQuestion extends Question {
     /**
      * The data injected to the custom question
      */
-    data: Record<string, string>;
+    data?: Record<string, string>;
 }
