@@ -42,6 +42,7 @@ export interface Chapter {
     title: string;
     objectives?: string[];
     contents: uid[];
+    duration: number;
 }
 
 export interface Parameters {

@@ -207,6 +207,11 @@ export interface Chapter {
      * Specifies the chapter starting edges
      */
     edges: Edge[];
+
+    /**
+     * Estimated duration to complete the chapter
+     */
+    duration: number;
 }
 
 export interface Screen {
