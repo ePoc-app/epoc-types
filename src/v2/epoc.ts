@@ -68,6 +68,11 @@ export interface EpocMetadata {
     objectives: string[];
 
     /**
+     * Defines the list of prerequisites to know before starting the ePoc
+     */
+    prerequisites: string[];
+
+    /**
      * Specifies the total of chapters of the ePoc
      */
     chaptersCount: number;

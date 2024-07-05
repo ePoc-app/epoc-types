@@ -16,6 +16,7 @@ export interface EpocMetadata {
     thumbnail : string;
     summary: html;
     objectives: string[];
+    prerequisites: string[];
     chaptersCount: number;
     assessmentsCount: number;
     download: string;
