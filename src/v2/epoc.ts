@@ -83,6 +83,11 @@ export interface EpocMetadata {
     assessmentsCount: number;
 
     /**
+     * Specifies the mean duration of the ePoc chapters
+     */
+    chapterDuration: number;
+
+    /**
      * Specifies the download URL
      */
     download: uri;

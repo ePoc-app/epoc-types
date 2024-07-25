@@ -19,6 +19,7 @@ export interface EpocMetadata {
     prerequisites: string[];
     chaptersCount: number;
     assessmentsCount: number;
+    chapterDuration: number;
     download: string;
     edition: string;
     license: {
