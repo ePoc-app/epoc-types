@@ -49,6 +49,5 @@ export interface Chapter {
 
 export interface Parameters {
     chapterParameter?: string;
-    easierScoring?: boolean;
     openQuestionButton?: string;
 }

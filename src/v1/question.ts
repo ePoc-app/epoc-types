@@ -7,8 +7,17 @@ export interface Question {
     label: string;
     responses: Array<Response>;
     correctResponse: string|Array<string>|Array<{label: string, values: string[]}>;
+
+    /**
+     * The explanation of the correction of the question
+     * @deprecated use feedback property
+     */
     explanation: html;
-    easierScoring?: boolean;
+
+    /**
+     * The global feedback of the question
+     */
+    feedback: html;
 }
 
 export interface DragAndDropquestion extends Question{
@@ -49,5 +58,6 @@ export interface CustomQuestion extends Question {
 export interface Response {
     label: string;
     value: string;
-    explanation?: string;
+    feedback?: string;
+    score?:number;
 }

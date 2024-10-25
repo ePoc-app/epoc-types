@@ -37,8 +37,14 @@ export interface Question {
 
     /**
      * The explanation of the correction of the question
+     * @deprecated use feedback property
      */
     explanation: html;
+
+    /**
+     * The global feedback of the question
+     */
+    feedback: html;
 }
 
 /**
@@ -54,6 +60,16 @@ export interface Response {
      * The hidden value of the response
      */
     value: string;
+
+    /**
+     * The feedback of this specific response
+     */
+    feedback?: string;
+
+    /**
+     * The partial score of this particular response. If set the question total score is based on the sum of partial scores
+     */
+    score?: number
 }
 
 /**
