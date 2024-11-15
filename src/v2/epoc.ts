@@ -2,6 +2,7 @@ import {Content} from './content';
 import {html, uid, uri, langcode} from './types';
 import {Question} from './question';
 import {Badge} from './badge';
+import {Rule} from './rule';
 
 /**
 * Contains all the ePoc metadata that can be retrieved from the library API 
@@ -258,19 +259,13 @@ export interface Screen {
 }
 
 export interface Edge {
-
-    /**
-     * Specifies the source screen uid
-     */
-    source: uid;
-  
     /**
      * Specifies the target screen uid
      */
     target: uid;
-  
+
     /**
-     * @Todo Define conditionnal behavior of edges
+     * Specifies the rule to activate this edge
      */
-    data?: Object;
+    rule: Rule
 }
