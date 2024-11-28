@@ -3,7 +3,7 @@ import {html} from './types';
 export interface Question {
     type: string;
     score: number;
-    statement: string;
+    statement: html;
     label: string;
     responses: Array<Response>;
     correctResponse: string|Array<string>|Array<{label: string, values: string[]}>;
@@ -12,12 +12,12 @@ export interface Question {
      * The explanation of the correction of the question
      * @deprecated use feedback property
      */
-    explanation: html;
+    explanation?: html;
 
     /**
      * The global feedback of the question
      */
-    feedback: html;
+    feedback?: html;
 }
 
 export interface DragAndDropquestion extends Question{

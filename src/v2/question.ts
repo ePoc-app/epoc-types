@@ -18,7 +18,7 @@ export interface Question {
     /**
      * The statement of the question
      */
-    statement: string;
+    statement: html;
 
     /**
      * The label of the question
@@ -39,12 +39,12 @@ export interface Question {
      * The explanation of the correction of the question
      * @deprecated use feedback property
      */
-    explanation: html;
+    explanation?: html;
 
     /**
      * The global feedback of the question
      */
-    feedback: html;
+    feedback?: html;
 }
 
 /**
