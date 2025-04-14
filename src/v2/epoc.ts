@@ -19,6 +19,11 @@ export interface EpocMetadata {
     version: number;
 
     /**
+     * Specifies the ePoc language
+     */
+    lang: string;
+
+    /**
      * Specifies the last modification date (YYYY-MM-DD HH:MM:SS)
      */
     lastModif: string;

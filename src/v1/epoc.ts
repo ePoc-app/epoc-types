@@ -8,6 +8,7 @@ export interface EpocMetadata {
     lastModif : string;
     editorVersion: string;
     version : string;
+    lang: string;
     id: string;
     title: string;
     image: string;
