@@ -1,29 +1,29 @@
 {
-  "name": "@epoc/epoc-types",
-  "version": "2.0.0-beta.17",
-  "description": "ePoc (Electronic Pocket Open Course) types specifications",
-  "main": "dist/index.ts",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "p": "tsc && npm publish --access=public --tag beta"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.inria.fr:learninglab/epoc/epoc-types.git"
-  },
-  "keywords": [
-    "epoc",
-    "inria",
-    "types",
-    "specs",
-    "mobile",
-    "learning",
-    "format",
-    "course"
-  ],
-  "author": "Inria Learning Lab",
-  "license": "CeCILL-B",
-  "devDependencies": {
-    "typescript": "^4.9.5"
-  }
+    "name": "@epoc/epoc-types",
+    "version": "2.0.0-beta.18",
+    "description": "ePoc (Electronic Pocket Open Course) types specifications",
+    "main": "dist/index.ts",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "p": "tsc && npm publish --access=public --tag beta"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.inria.fr:learninglab/epoc/epoc-types.git"
+    },
+    "keywords": [
+        "epoc",
+        "inria",
+        "types",
+        "specs",
+        "mobile",
+        "learning",
+        "format",
+        "course"
+    ],
+    "author": "Inria Learning Lab",
+    "license": "CeCILL-B",
+    "devDependencies": {
+        "typescript": "^4.9.5"
+    }
 }
