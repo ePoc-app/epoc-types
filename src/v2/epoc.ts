@@ -1,18 +1,18 @@
-import {Content} from './content';
-import {html, uid, uri, langcode} from './types';
-import {Question} from './question';
-import {Badge} from './badge';
-import {Rule} from './rule';
+import { Content } from "./content";
+import { html, uid, uri, langcode } from "./types";
+import { Question } from "./question";
+import { Badge } from "./badge";
+import { Rule } from "./rule";
 
 /**
-* Contains all the ePoc metadata that can be retrieved from the library API 
-*/
+ * Contains all the ePoc metadata that can be retrieved from the library API
+ */
 export interface EpocMetadata {
     /**
      * Specifies the ePoc editor version for debug purpose
      */
     editorVersion: string;
-    
+
     /**
      * Specifies the ePoc data format version for backward compatibility
      */
@@ -21,7 +21,7 @@ export interface EpocMetadata {
     /**
      * Specifies the ePoc language
      */
-    lang: string;
+    lang?: string;
 
     /**
      * Specifies the last modification date (YYYY-MM-DD HH:MM:SS)
@@ -56,7 +56,7 @@ export interface EpocMetadata {
     /**
      * Defines the path or URL of the video thumbnail
      */
-    thumbnail : uri;
+    thumbnail: uri;
 
     /**
      * Defines the summary of the ePoc
@@ -121,8 +121,7 @@ export interface EpocMetadata {
          * Specifies the text content of the license
          */
         content: string;
-    }
-
+    };
 }
 
 /**
@@ -138,7 +137,6 @@ export interface Epoc extends EpocMetadata {
      * Map of all screens (id, screens) of the ePoc
      */
     screens: Map<uid, Screen>;
-
 
     /**
      * Map of all contents (id, content) of the ePoc
@@ -164,18 +162,15 @@ export interface Epoc extends EpocMetadata {
     /**
      * Map of all badges (id, badge) of the ePoc
      */
-    badges: Map<uid, Badge>
+    badges: Map<uid, Badge>;
 
     /**
      * List of plugins of the ePoc
      */
     plugins: uri[];
-
 }
 
-
 export interface Author {
-
     /**
      * Specifies the author's full name (firstname and lastname)
      */
@@ -198,7 +193,6 @@ export interface Author {
 }
 
 export interface Parameters {
-
     /**
      * Specifies the chapter label globally
      * @default 'Chapter'
@@ -207,7 +201,6 @@ export interface Parameters {
 }
 
 export interface Chapter {
-
     /**
      * Specifies the chapter label
      * @default 'Chapter'
@@ -231,7 +224,6 @@ export interface Chapter {
 }
 
 export interface Screen {
-    
     /**
      * Specifies the screen card icon
      */
@@ -272,5 +264,5 @@ export interface Edge {
     /**
      * Specifies the rule to activate this edge
      */
-    rule: Rule
+    rule: Rule;
 }

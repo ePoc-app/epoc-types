@@ -1,20 +1,20 @@
-import {Author} from './author';
-import {Content} from './content';
-import {html, uid} from './types';
-import {Question} from './question';
-import {Badge} from './badge';
+import { Author } from "./author";
+import { Content } from "./content";
+import { html, uid } from "./types";
+import { Question } from "./question";
+import { Badge } from "./badge";
 
 export interface EpocMetadata {
-    lastModif : string;
+    lastModif: string;
     editorVersion: string;
-    version : string;
-    lang: string;
+    version: string;
+    lang?: string;
     id: string;
     title: string;
     image: string;
     teaser?: string;
     authors: Author[];
-    thumbnail : string;
+    thumbnail: string;
     summary: html;
     objectives: string[];
     prerequisites: string[];
@@ -27,7 +27,7 @@ export interface EpocMetadata {
         name: string;
         url: string;
         content: string;
-    }
+    };
 }
 
 export interface Epoc extends EpocMetadata {
