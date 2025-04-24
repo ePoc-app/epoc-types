@@ -192,25 +192,18 @@ export interface Author {
     description: html;
 }
 
-export interface Parameters {
-    /**
-     * Specifies the chapter label globally
-     * @default 'Chapter'
-     */
-    chapterLabel?: string;
-}
+export interface Parameters {}
 
 export interface Chapter {
-    /**
-     * Specifies the chapter label
-     * @default 'Chapter'
-     */
-    label?: string;
-
     /**
      * Specifies the chapter title
      */
     title: string;
+
+    /**
+     * Specifies the chapter subtitle
+     */
+    subtitle?: string;
 
     /**
      * Specifies the chapter starting edges

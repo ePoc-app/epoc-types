@@ -43,12 +43,12 @@ export interface Epoc extends EpocMetadata {
 
 export interface Chapter {
     title: string;
+    subtitle?: string;
     objectives?: string[];
     contents: uid[];
     duration: number;
 }
 
 export interface Parameters {
-    chapterParameter?: string;
     openQuestionButton?: string;
 }
