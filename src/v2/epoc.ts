@@ -154,10 +154,10 @@ export interface Epoc extends EpocMetadata {
     parameters: Parameters;
 
     /**
-     * Specifies if the ePoc delivers a certificate
-     * @default true
+     * Specifies if the ePoc is not delivering a certificate
+     * @default false
      */
-    certificate?: boolean;
+    certificateDisabled?: boolean;
 
     /**
      * The score to obtain the certificate
