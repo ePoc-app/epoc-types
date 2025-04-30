@@ -31,6 +31,7 @@ export interface EpocMetadata {
 }
 
 export interface Epoc extends EpocMetadata {
+    certificate?: boolean;
     certificateBadgeCount: number;
     certificateScore: number;
     parameters: Parameters;
@@ -49,6 +50,4 @@ export interface Chapter {
     duration: number;
 }
 
-export interface Parameters {
-    openQuestionButton?: string;
-}
+export interface Parameters {}

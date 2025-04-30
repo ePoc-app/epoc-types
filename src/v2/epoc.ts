@@ -154,10 +154,22 @@ export interface Epoc extends EpocMetadata {
     parameters: Parameters;
 
     /**
+     * Specifies if the ePoc delivers a certificate
+     * @default true
+     */
+    certificate?: boolean;
+
+    /**
      * The score to obtain the certificate
      * @deprecated Use badges instead
      */
     certificateScore?: number;
+
+    /**
+     * The number of badges to obtain the certificate
+     * @default 1
+     */
+    certificateBadgeCount: number;
 
     /**
      * Map of all badges (id, badge) of the ePoc
