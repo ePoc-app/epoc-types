@@ -3,6 +3,8 @@ import { html, uid, uri, langcode } from "./types";
 import { Question } from "./question";
 import { Badge } from "./badge";
 import { Rule } from "./rule";
+import { License } from './license';
+import { Publisher } from './publisher';
 
 /**
  * Contains all the ePoc metadata that can be retrieved from the library API
@@ -69,6 +71,11 @@ export interface EpocMetadata {
     authors: Author[];
 
     /**
+     * The entity responsible for making the ePoc available
+     */
+    publisher: Publisher;
+
+    /**
      * Defines the list of pedagogical objectives of the ePoc
      */
     objectives: string[];
@@ -99,6 +106,12 @@ export interface EpocMetadata {
     download: uri;
 
     /**
+     * Tags associated with the ePoc for categorization and filtering.
+     * @optional
+     */
+    tags?: string[];
+
+    /**
      * Map of translations available (lang code, ePoc id)
      */
     translations?: Map<langcode, uid>;
@@ -106,22 +119,7 @@ export interface EpocMetadata {
     /**
      * Specifies the ePoc license
      */
-    license: {
-        /**
-         * Specifies the license name
-         */
-        name: string;
-
-        /**
-         * Specifies the url where you can find the license
-         */
-        url: string;
-
-        /**
-         * Specifies the text content of the license
-         */
-        content: string;
-    };
+    license: License;
 }
 
 /**

@@ -3,6 +3,8 @@ import { Content } from "./content";
 import { html, uid } from "./types";
 import { Question } from "./question";
 import { Badge } from "./badge";
+import { License } from './license';
+import { Publisher } from './publisher';
 
 export interface EpocMetadata {
     lastModif: string;
@@ -13,9 +15,11 @@ export interface EpocMetadata {
     title: string;
     image: string;
     teaser?: string;
+    publisher: Publisher
     authors: Author[];
     thumbnail: string;
     summary: html;
+    tags: string[];
     objectives: string[];
     prerequisites: string[];
     chaptersCount: number;
@@ -23,11 +27,7 @@ export interface EpocMetadata {
     chapterDuration: number;
     download: string;
     edition: string;
-    license: {
-        name: string;
-        url: string;
-        content: string;
-    };
+    license: License;
 }
 
 export interface Epoc extends EpocMetadata {
