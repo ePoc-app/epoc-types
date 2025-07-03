@@ -1,6 +1,7 @@
 import { EpocMetadata } from './epoc';
 import { Publisher } from './publisher';
 import { License } from './license';
+import { uid } from './types';
 
 /**
  * Represents a collection of ePoc resources. An ePocCollection is a curated set
@@ -10,9 +11,10 @@ import { License } from './license';
  */
 export interface ePocCollection {
     /**
-     * A unique identifier for the collection.
+     * A unique identifier for the collection following a reverse domain name convention.
+     * @example: fr.inria.learninglab.epocs
      */
-    identifier: string;
+    id: string;
 
     /**
      * The title of the collection.
@@ -48,7 +50,7 @@ export interface ePocCollection {
 
 
     /**
-     * An array of ePoc resources included in this collection.
+     * Map of ePocs (id, ePoc metadata) included in this collection.
      */
-    ePocs: EpocMetadata[];
+    ePocs: Record<uid, EpocMetadata>;
 }

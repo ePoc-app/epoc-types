@@ -5,9 +5,10 @@
  */
 export interface Publisher {
     /**
-     * A unique identifier for the publisher, such as an ISBN or URI.
+     * A unique identifier for the publisher following a reverse domain name convention.
+     * @example: fr.inria.learninglab
      */
-    identifier: string;
+    id: string;
 
     /**
      * The name of the publisher.
