@@ -1,4 +1,5 @@
-import {uid, html, uri, langcode} from './types';
+import { uid, html, uri, langcode } from './types';
+import { Rule } from './rule';
 
 /**
 * Define the union type of all kind of screen content
@@ -25,6 +26,11 @@ export interface Html extends BaseContent {
      * Specifies the rich html text of the content
      */
     html: html;
+
+    /**
+     * Rule to unlock the content
+     */
+    rule?: Rule;
 }
 
 /**
@@ -55,6 +61,11 @@ export interface Video extends BaseContent {
      * Specifies the video poster (thumbnail) uri
      */
     poster: uri;
+
+    /**
+     * Rule to unlock the content
+     */
+    rule?: Rule;
 }
 
 /**
@@ -75,6 +86,11 @@ export interface Audio extends BaseContent {
      * Specifies the text transcript of the audio
      */
     transcript: string;
+
+    /**
+     * Rule to unlock the content
+     */
+    rule?: Rule;
 }
 
 /**
@@ -100,6 +116,11 @@ export interface Assessment extends BaseContent {
      * Estimated time to do the assessment
      */
     time?: number;
+
+    /**
+     * Rule to unlock the content
+     */
+    rule?: Rule;
 }
 
 /**

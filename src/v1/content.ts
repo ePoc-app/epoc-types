@@ -1,4 +1,5 @@
-import {html, uid} from './types';
+import { html, uid } from './types';
+import { Rule } from './rule';
 
 export interface Content {
     type: string;
@@ -15,6 +16,7 @@ export interface Video extends Content {
     subtitles: {label: string, lang: string, src: string}[];
     transcript: string;
     poster: string;
+    rule?: Rule;
 }
 
 export interface Audio extends Content {
@@ -22,11 +24,13 @@ export interface Audio extends Content {
     source: string;
     summary: html;
     transcript: string;
+    rule?: Rule;
 }
 
 export interface Html extends Content {
     type: 'html'
     html: html;
+    rule?: Rule;
 }
 
 export interface Assessment extends Content {
@@ -34,6 +38,7 @@ export interface Assessment extends Content {
     summary?: html;
     questions?: uid[];
     time?: number;
+    rule?: Rule;
 }
 
 export interface SimpleQuestion extends Content {
