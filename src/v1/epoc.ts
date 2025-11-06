@@ -5,7 +5,8 @@ import { Question } from "./question";
 import { Badge } from "./badge";
 import { License } from './license';
 import { Publisher } from './publisher';
-
+import { Rule } from './rule';
+ 
 export interface EpocMetadata {
     lastModif: string;
     editorVersion: string;
@@ -48,6 +49,7 @@ export interface Chapter {
     objectives?: string[];
     contents: uid[];
     duration: number;
+    rule?: Rule;
 }
 
 export interface Parameters {}

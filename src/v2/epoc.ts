@@ -224,6 +224,11 @@ export interface Chapter {
      * Estimated duration to complete the chapter
      */
     duration: number;
+
+    /**
+     * Rule to unlock the chapter
+     */
+    rule?: Rule;
 }
 
 export interface Screen {
